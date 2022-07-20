@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,18 @@
     {% for order in all_orders %}
     <section>
         <p>
-            {{ order.customer_name }}: <b>{{ order.order_date }}</b> :  <b>{{ order.quantity }}</b> : <b>{{ order.movie_name }}</b> : <b>{{ order.description }}</b>
+            <a href="/orders/{{all_orders.index(order)}}">{{order.customer_name}} :</a>
+            <b>Date : {{ order.order_date }}</b>  
+             <b>Copies : {{ order.quantity }}</b>  
+             <b>Movie : {{ order.movie_name }}</b> 
+              <b>Synopsis : {{ order.description }}</b>
 
         </p>
     </section>
     {% endfor %}
+
+<footer>
+    <h2>Johnny's Movies</h2>
+</footer> 
 </body>
 </html>

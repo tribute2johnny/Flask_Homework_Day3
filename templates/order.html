@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,19 @@
     <h1>Customer_Order</h1>
     <section>
         <p>
-            {{ order.customer_name }} {{ order.order_date }}
+            {{ order.customer_name }} :
+            <b>Date : {{ order.order_date }}</b>  
+             <b>Copies : {{ order.quantity }}</b>  
+             <b>Movie : {{ order.movie_name }}</b> 
+              <b>Synopsis : {{ order.description }}</b>
         </p>
     </section>
     
 </body>
+<div>
+    <button onclick="history.back()">Go Back</button>
+</div>
+<footer>
+    <h2>Johnny's Movies</h2>
+</footer>
 </html>
