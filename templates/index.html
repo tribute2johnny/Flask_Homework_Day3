@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Order List - {{ title }}</title>
+</head>
+<body>
+    <h1>Todays Orders</h1>
+    {% for order in all_orders %}
+    <section>
+        <p>
+            {{ order.customer_name }}: <b>{{ order.order_date }}</b> :  <b>{{ order.quantity }}</b> : <b>{{ order.movie_name }}</b> : <b>{{ order.description }}</b>
+
+        </p>
+    </section>
+    {% endfor %}
+</body>
+</html>
