@@ -6,6 +6,8 @@ from models.order_list import orders as all_orders
 def index():
     return "Welcome to the store"
 
+# home page and contacts can be done in app.py
+
 @app.route('/orders')
 def orders():
     return render_template('index.html', title="All Orders", all_orders=all_orders)
